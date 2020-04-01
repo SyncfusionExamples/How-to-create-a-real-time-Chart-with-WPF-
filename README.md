@@ -1,4 +1,4 @@
-# Real-timeline-Chart
+# Real timeline Chart in WPF
 This demo explains how to create a real timeline chart in WPF. The following code example illustrates how to update the ItemsSource bound to chart series in real time use case.
 
 **[XAML]**
