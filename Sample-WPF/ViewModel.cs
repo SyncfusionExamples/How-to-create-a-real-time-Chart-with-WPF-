@@ -13,31 +13,22 @@ using System.Windows.Threading;
 
 namespace Sample_WPF
 {
-    public class ViewModel
-    {
-        public ViewModel()
-        {
-            
-        }
-    }
-
     public class DataGenerator
     {
-        public int DataCount = 50000;
-        private int RateOfData = 5;
-        private ObservableCollection<Data> Data;
         private Random randomNumber;
-        int myindex = 0;
+        private ObservableCollection<Data> data = new ObservableCollection<Data>();
+        public int dataCount = 50000;
+        private int rate = 5;
+        int index = 0;
         DispatcherTimer timer;
-
         public ObservableCollection<Data> DynamicData { get; set; }
+
 
         public DataGenerator()
         {
             randomNumber = new Random();
             DynamicData = new ObservableCollection<Data>();
-            Data = new ObservableCollection<Data>();
-            Data = GenerateData();
+            data = GenerateData();
             LoadData();
 
             timer = new DispatcherTimer();
@@ -48,17 +39,17 @@ namespace Sample_WPF
 
         public void AddData()
         {
-            for (int i = 0; i < RateOfData; i++)
+            for (int i = 0; i < rate; i++)
             {
-                myindex++;
-                if (myindex < 100)
+                index++;
+                if (index < 100)
                 {
-                    DynamicData.Add(this.Data[myindex]);
+                    DynamicData.Add(this.data[index]);
                 }
-                else if (myindex > 100)
+                else if (index > 100)
                 {
                     DynamicData.RemoveAt(0);//Remove data not visible
-                    DynamicData.Add(this.Data[(myindex % (this.Data.Count - 1))]);
+                    DynamicData.Add(this.data[(index % (this.data.Count - 1))]);
                 }
             }
         }
@@ -67,25 +58,25 @@ namespace Sample_WPF
         {
             for (int i = 0; i < 10; i++)
             {
-                myindex++;
-                if (myindex < Data.Count)
+                index++;
+                if (index < data.Count)
                 {
-                    DynamicData.Add(this.Data[myindex]);
+                    DynamicData.Add(this.data[index]);
                 }
             }
         }
 
         public ObservableCollection<Data> GenerateData()
         {
-            ObservableCollection<Data> datas = new ObservableCollection<Data>();
+            ObservableCollection<Data> generatedData = new ObservableCollection<Data>();
 
             DateTime date = new DateTime(2009, 1, 1);
             double value = 1000;
             double value1 = 1001;
             double value2 = 1002;
-            for (int i = 0; i < this.DataCount; i++)
+            for (int i = 0; i < this.dataCount; i++)
             {
-                datas.Add(new Data(date, value, value1, value2));
+                generatedData.Add(new Data(date, value, value1, value2));
                 date = date.Add(TimeSpan.FromSeconds(5));
 
                 if ((randomNumber.NextDouble() + value2) < 1004.85)
@@ -104,7 +95,7 @@ namespace Sample_WPF
                 }
             }
 
-            return datas;
+            return generatedData;
         }
 
         private void timer_Tick(object sender, EventArgs e)

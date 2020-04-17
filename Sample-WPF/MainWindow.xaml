@@ -8,12 +8,11 @@
         mc:Ignorable="d" 
         Title="MainWindow" Margin="40">
 
-    <Window.DataContext>
-        <local:DataGenerator/>
-    </Window.DataContext>
-
     <Grid>
         <chart:SfChart x:Name="Chart" Margin="0,20,20,0" AreaBorderThickness="0,1,1,1">
+            <chart:SfChart.DataContext>
+                <local:DataGenerator/>
+            </chart:SfChart.DataContext>
             <chart:SfChart.PrimaryAxis>
                 <chart:DateTimeAxis LabelFormat="hh:mm:ss">
                     <chart:ChartAxis.Header>
