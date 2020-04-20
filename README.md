@@ -1,5 +1,5 @@
 # Real timeline Chart in WPF
-This demo explains how to create a real timeline chart in WPF. [How to select a multiple chips from the Xamarin ChipGroup [SfChipGroup]
+This demo explains how to create a real timeline chart in WPF [How to select a multiple chips from the Xamarin ChipGroup [SfChipGroup]
 ](https://www.syncfusion.com/kb/11416/?utm_medium=listing&utm_source=github-examples)
 
 The following code example illustrates how to update the ItemsSource bound to chart series in real time use case.
