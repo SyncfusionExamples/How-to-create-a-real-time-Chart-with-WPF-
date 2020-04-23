@@ -1,5 +1,7 @@
 # Real timeline Chart in WPF
-This demo explains how to create a real time chart in WPF [How to create a real time Chart (SfChart) using MVVM in WPF
+This demo explains how to create a real time chart in WPF
+
+[How to create a real time Chart (SfChart) using MVVM in WPF
 ](https://www.syncfusion.com/kb/11416/?utm_medium=listing&utm_source=github-examples)
 
 The following code example illustrates how to update the ItemsSource bound to chart series in real time use case.
@@ -160,6 +162,3 @@ public class DataGenerator
 
 ```
 
-## <a name="troubleshooting"></a>Troubleshooting ##
-### Path too long exception
-If you are facing path too long exception when building this example project, close Visual Studio and rename the repository to short and build the project.
