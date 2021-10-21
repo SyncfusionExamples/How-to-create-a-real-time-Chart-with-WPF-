@@ -162,3 +162,5 @@ public class DataGenerator
 
 ```
 
+KB article - [Real timeline Chart in WPF](https://www.syncfusion.com/kb/11416/how-to-create-a-real-time-chart-sfchart-using-mvvm-in-wpf)
+
