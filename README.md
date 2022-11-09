@@ -1,10 +1,8 @@
-# Real timeline Chart in WPF
-This demo explains how to create a real time chart in WPF
+# How to create a real time Chart (SfChart) using MVVM in WPF
 
-[How to create a real time Chart (SfChart) using MVVM in WPF
-](https://www.syncfusion.com/kb/11416/?utm_medium=listing&utm_source=github-examples)
+This demo explains how to create a real time [chart in WPF](https://help.syncfusion.com/wpf/charts/getting-started).
 
-The following code example illustrates how to update the ItemsSource bound to chart series in real time use case.
+The following code example illustrates how to update the **ItemsSource** bound to chart series in real time use case.
 
 **[XAML]**
 
@@ -161,6 +159,16 @@ public class DataGenerator
 }
 
 ```
+## Output:
 
-KB article - [Real timeline Chart in WPF](https://www.syncfusion.com/kb/11416/how-to-create-a-real-time-chart-sfchart-using-mvvm-in-wpf)
+![Real timeline Chart in WPF](https://user-images.githubusercontent.com/53489303/200725932-8b21e2ce-d5b3-451a-917f-b68b1886b692.gif)
 
+KB article - [How to create a real time Chart (SfChart) using MVVM in WPF](https://www.syncfusion.com/kb/11416/how-to-create-a-real-time-chart-sfchart-using-mvvm-in-wpf)
+
+## See also
+
+[How to bind a simple collection to Chart (SfChart) in WPF](https://help.syncfusion.com/wpf/charts/databinding#binding-a-simple-collection-to-the-chart)
+
+[Tips to improve the performance of Chart in WPF](https://help.syncfusion.com/wpf/charts/performance)
+
+[What are the available types of Chart](https://help.syncfusion.com/wpf/charts/series)
